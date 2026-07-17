@@ -1,0 +1,136 @@
+.hero-section{
+    position: relative;
+    padding-top: 5rem;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    background-color: #000000;
+    opacity: .5;
+    inset: 0;
+    top: 5rem;
+    z-index: 1;
+}
+
+.hero-texts{
+    position: absolute;
+    color: #ffffff;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    inset: 0;
+    top: clamp(1.2rem, 5vw, 6rem);
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.hero-h1{
+    font-weight: 800;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.hero-p{
+    font-weight: 400;
+    font-size: 1.04rem;
+    color: hsl(0, 0%, 90%);
+    text-align: center;
+}
+
+.quote-btn{
+    font-size: 1.06rem;
+    border-radius: 2px;
+    background-color: hsl(212, 70%, 45%);
+    border: .5px solid #ffffff;
+    outline: 2px solid hsl(212, 70%, 40%);
+    font-weight: 600;
+    color: hsl(0, 0%, 95%);
+    padding: 12px;
+    transition: 300ms ease;
+}
+
+.quote-btn:hover{
+    background-color: hsl(212, 70%, 50%);
+    box-shadow: 0 2px 4px hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 100%);
+}
+
+.about-section, .service-section, .gallery-sec, .review-section, .customer-section{
+    padding-top: 3rem;
+}
+
+.section-head, .section-subhead{
+    text-align: center;
+    padding: 8px;
+}
+
+.section-head {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 800;
+}
+
+.section-subhead{
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.social-icon-cta{
+    position: fixed;
+    bottom: 10%;
+    right: 8px;
+    z-index: 3;
+
+}
+
+.whatsapp-icon{
+    width: 64px;
+    height: 64px;
+    padding: 8px;
+    border-radius: 50%;
+    border: 1.5px solid #00c200ff;
+    box-shadow: 0 2px 4px #00c200ff;
+    background-color: #000000;
+}

@@ -12,12 +12,25 @@ const closeBtn = document.querySelector(".close-btn");
 const previousBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 
+const menuBtn = document.querySelector(".menu-btn");
+const menu = document.querySelector(".nav-links-box");
+
+menuBtn.addEventListener("click", () => {
+    console.log("clickedd")
+    const menuOpen = menu.classList.toggle("openMenu");
+    menuOpen ? menuBtn.textContent = "Close" : menuBtn.textContent = "Menu";
+})
+
+
+
+
 let currentImageIndex = 0;
 
 
 pictures.forEach((picture, index) => {
 
         picture.addEventListener("click", () =>{
+        modalImage.src = "";
 
         currentImageIndex = index;
 

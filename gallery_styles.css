@@ -2,29 +2,103 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+.nav-bar{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 25px;
+    top: 0;
+    left: 0;
+    background-color: hsl(212, 70%, 45%);
+    width: 100%;
+    height: 5rem;
+    z-index: 6;
+}
+
+.nav-links-box a, .menu-btn{
+    text-decoration: none;
+    color: hsl(0, 0%, 90%);
+    font-weight: 600;
+    padding: 10px;
+    font-size: 1.2rem;
+    transition: 300ms ease;
+}
+
+.nav-links-box a:hover{
+    color: #ffffff;
+    text-shadow: 0 1.5px 3px hsl(0, 0%, 60%);
+}
+
+
+
+
+.logo-box{
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-btn{
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 2px;
+    background-color: hsl(212, 70%, 45%);
+    outline: 2px solid #ffffff;
+}
+
+.menu-btn:hover{
+    background-color: hsl(212, 70%, 50%);
+    box-shadow: 0 2px 5px #ffffff;
+}
+
+.page-intro{
+    padding: 3rem;
+    padding-top: 6rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    inset: 0;
+    height: auto;
+    color: hsl(0, 0%, 92%);
+    text-shadow: 0 1px 2px hsl(0, 0%, 70%);
+    background-color: hsl(212, 70%, 46%);
+}
+
+.hero-text{
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
 }
 
 .gallery-section{
     display: flex;
     flex-wrap: wrap;
+    margin: 0 2px;
 }
 
 .pic-card{
-    margin: 15px auto;
+    margin: 8px auto;
     text-align: center;
 
 }
 
 .pic{
-    height: 240px;
-    width: 240px;
+    height: 480px;
+    max-width: 100%;
     object-fit: cover;
 }
 
 
 .pic-modal{
-    width: 90%;
+    width: 98%;
     height: fit-content;
     margin: 50px auto;
     background: black;
@@ -39,6 +113,8 @@
 .modal-image{
     width: 100%;
     height: 80vh;
+    margin: 0;
+    padding: 0;
     object-fit: contain;
 }
 
@@ -47,7 +123,7 @@
     font-size: 2rem;
     font-weight: 800;
     border: none;
-    padding: 0 4px;
+    padding: 0 8px;
     background: transparent;
     cursor: pointer;
     color: #fff;
@@ -60,10 +136,13 @@
 }
 
 .prev-btn, .next-btn{
-    background-color: hsla(0, 0%, 13% / 80%);
+    background-color: hsl(0, 0%, 13%);
+    opacity: .6;
     box-shadow: 0 2px 4px #343434;
     transform: translateY(-50%);
     top: 50%;
+    transition: 300ms ease;
+    border-radius: 2px;
 }
 
 .prev-btn{
@@ -74,8 +153,65 @@
     right: 0;
 }
 
+.prev-btn:hover, .next-btn:hover{
+    background-color: #027f00;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    background-color: #1d1d1d;
+}
+
+.footer p{
+    text-align: center;
+    color: #ffffff;
+}
+
+.web-designer a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #00c500;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px){
+    .nav-links-box{
+        display: none;
+    }
+
+    .nav-links-box.openMenu{
+        inset: 0;
+        width: 100%;
+        height: fit-content;
+        flex-wrap: wrap;
+        margin-top: 65px;
+        display: flex;
+        background: hsl(212, 70%, 46%);
+        flex-direction: column;
+        position: absolute;
+    }
+
+    .nav-links-box a{
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+        border: 1px solid slategray;
+    }
+
+    .nav-links-box a:hover{
+        background: hsl(212, 70%, 40%);
+    }
+
+}
 
 @media(min-width: 768px){
+    .menu-btn  {display: none;}
     .pic-modal{
         /* max-width: fit-content; */
         width: 60%;
@@ -86,3 +222,4 @@
         width: 220px;
 }
 }
+
