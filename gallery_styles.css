@@ -22,6 +22,7 @@ body{
     z-index: 6;
 }
 
+
 .nav-links-box a, .menu-btn{
     text-decoration: none;
     color: hsl(0, 0%, 95%);
